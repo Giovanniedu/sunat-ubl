@@ -1,0 +1,50 @@
+{
+  "tipo": "01",
+  "serie": "F001",
+  "numero": 1,
+  "fecha": "2026-10-30",
+  "hora": "15:42:10",
+  "moneda": "PEN",
+  "orden_compra": "OC-2026-0042",
+  "observacion": "Gracias por su compra",
+  "emisor": {
+    "ruc": "20999999990",
+    "razon_social": "SERVICIOS DEMO PERU SAC",
+    "nombre_comercial": "Demo Perú",
+    "direccion": "AV. SIEMPRE VIVA 123",
+    "ubigeo": "150101"
+  },
+  "cliente": {
+    "tipo_doc": "6",
+    "numero": "20512345671",
+    "razon_social": "CLIENTE DE PRUEBA SAC",
+    "direccion": "JR. LAMBAYEQUE 456",
+    "email": "compras@cliente.pe"
+  },
+  "lineas": [
+    {
+      "codigo": "SRV-001",
+      "descripcion": "SERVICIO DE CONSULTORIA EN CRECIMIENTO (10 HORAS)",
+      "cantidad": 2,
+      "valor_unitario": 100.0,
+      "tipo_afectacion": "10",
+      "unidad": "ZZ"
+    },
+    {
+      "codigo": "SRV-002",
+      "descripcion": "SOPORTE TECNICO MENSUAL",
+      "cantidad": 1,
+      "precio_con_igv": 118.0,
+      "tipo_afectacion": "10",
+      "unidad": "ZZ"
+    },
+    {
+      "codigo": "ADM-001",
+      "descripcion": "SERVICIO EXONERADO DEL IGV (ART. 2 LEY 27037)",
+      "cantidad": 1,
+      "valor_unitario": 50.0,
+      "tipo_afectacion": "20",
+      "unidad": "ZZ"
+    }
+  ]
+}
