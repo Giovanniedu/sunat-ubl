@@ -5,7 +5,7 @@
 # sunat-ubl
 
 [![CI](https://github.com/Giovanniedu/sunat-ubl/actions/workflows/ci.yml/badge.svg)](https://github.com/Giovanniedu/sunat-ubl/actions)
-[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://pypi.org/project/sunat-ubl/)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://pypi.org/project/sunat-ubl/)
 [![Licencia](https://img.shields.io/badge/licencia-MIT-green.svg)](LICENSE)
 [![Dependencias](https://img.shields.io/badge/dependencias-0-green.svg)](pyproject.toml)
 
