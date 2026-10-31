@@ -8,7 +8,9 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    # ubuntu-22.04: sigue ofreciendo Python 3.9 en el manifest de setup-python
+    # (ubuntu-latest ya es 26.04, que no tiene builds de 3.9).
+    runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
       matrix:
