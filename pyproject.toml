@@ -7,7 +7,7 @@ name = "sunat-ubl"
 version = "0.2.0"
 description = "Genera y firma XML UBL 2.1 de facturas y boletas electrónicas para SUNAT (Perú), y lee CDR. Núcleo sin dependencias."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "Fabricio Miranda Vila" }]
 keywords = ["sunat", "factura electronica", "boleta electronica", "ubl", "peru", "cpe", "cdr", "firma digital", "xmldsig"]
