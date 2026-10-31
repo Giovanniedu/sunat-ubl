@@ -4,13 +4,13 @@ build-backend = "hatchling.build"
 
 [project]
 name = "sunat-ubl"
-version = "0.1.0"
-description = "Genera XML UBL 2.1 de facturas y boletas electrónicas para SUNAT (Perú), y lee CDR. Sin dependencias."
+version = "0.2.0"
+description = "Genera y firma XML UBL 2.1 de facturas y boletas electrónicas para SUNAT (Perú), y lee CDR. Núcleo sin dependencias."
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
 authors = [{ name = "Fabricio Miranda Vila" }]
-keywords = ["sunat", "sunat-ubl", "factura electronica", "boleta electronica", "ubl", "peru", "cpe", "cdr"]
+keywords = ["sunat", "factura electronica", "boleta electronica", "ubl", "peru", "cpe", "cdr", "firma digital", "xmldsig"]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Intended Audience :: Developers",
@@ -24,7 +24,8 @@ classifiers = [
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["pytest>=8"]
+firma = ["signxml>=4", "lxml>=5"]
+dev = ["pytest>=8", "signxml>=4", "lxml>=5", "cryptography>=42"]
 
 [project.scripts]
 sunat-ubl = "sunat_ubl.cli:main"

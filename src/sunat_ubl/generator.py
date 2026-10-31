@@ -261,11 +261,16 @@ def a_xml(comprobante: Comprobante, indentar: bool = True) -> bytes:
     return ET.tostring(raiz, encoding="utf-8", xml_declaration=True)
 
 
-def guardar(comprobante: Comprobante, directorio: str = ".", indentar: bool = True) -> str:
-    """Escribe el XML con el nombre que exige SUNAT y devuelve la ruta."""
+def ruta_de(comprobante: Comprobante, directorio: str = ".") -> "Path":
+    """Ruta del XML con el nombre que exige SUNAT."""
     from pathlib import Path
 
-    destino = Path(directorio) / f"{comprobante.nombre_archivo}.xml"
+    return Path(directorio) / f"{comprobante.nombre_archivo}.xml"
+
+
+def guardar(comprobante: Comprobante, directorio: str = ".", indentar: bool = True) -> str:
+    """Escribe el XML con el nombre que exige SUNAT y devuelve la ruta."""
+    destino = ruta_de(comprobante, directorio)
     destino.parent.mkdir(parents=True, exist_ok=True)
     destino.write_bytes(a_xml(comprobante, indentar=indentar))
     return str(destino)

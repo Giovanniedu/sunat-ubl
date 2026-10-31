@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="sunat-ubl: facturas y boletas electrónicas de SUNAT en Python, sin dependencias">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0F1C"/>
+      <stop offset="1" stop-color="#111B2F"/>
+    </linearGradient>
+    <linearGradient id="acento" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2BE3A4"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+    <pattern id="rejilla" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1B2740" stroke-width="1"/>
+    </pattern>
+    <filter id="brillo" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="38" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#fondo)"/>
+  <rect width="1280" height="640" fill="url(#rejilla)" opacity="0.55"/>
+  <circle cx="1070" cy="90" r="150" fill="#2BE3A4" opacity="0.10" filter="url(#brillo)"/>
+  <circle cx="180" cy="610" r="170" fill="#38BDF8" opacity="0.08" filter="url(#brillo)"/>
+
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="72" y="104" fill="#5B7BA6" font-size="17" letter-spacing="3.2" font-weight="600">FACTURACIÓN ELECTRÓNICA · PERÚ</text>
+
+    <text x="70" y="212" fill="#F2F6FC" font-size="86" font-weight="800" letter-spacing="-2">sunat<tspan fill="#2BE3A4">-ubl</tspan></text>
+
+    <text x="72" y="268" fill="#A8BBD4" font-size="25">Facturas y boletas electrónicas de SUNAT</text>
+    <text x="72" y="304" fill="#A8BBD4" font-size="25">en Python. <tspan fill="#E8EFF8" font-weight="600">Cero dependencias.</tspan></text>
+
+    <g font-size="15" font-weight="600">
+      <rect x="72" y="352" width="150" height="38" rx="19" fill="#122135" stroke="#24405F"/>
+      <text x="147" y="377" fill="#8FB3D9" text-anchor="middle">UBL 2.1</text>
+
+      <rect x="236" y="352" width="196" height="38" rx="19" fill="#122135" stroke="#24405F"/>
+      <text x="334" y="377" fill="#8FB3D9" text-anchor="middle">0 dependencias</text>
+
+      <rect x="446" y="352" width="140" height="38" rx="19" fill="#122135" stroke="#24405F"/>
+      <text x="516" y="377" fill="#8FB3D9" text-anchor="middle">62 tests</text>
+
+      <rect x="600" y="352" width="96" height="38" rx="19" fill="#122135" stroke="#24405F"/>
+      <text x="648" y="377" fill="#8FB3D9" text-anchor="middle">MIT</text>
+    </g>
+
+    <g>
+      <rect x="72" y="430" width="8" height="8" rx="2" fill="#2BE3A4"/>
+      <text x="94" y="440" fill="#7E9CBE" font-size="16">Firma XMLDSig incluida</text>
+      <rect x="300" y="430" width="8" height="8" rx="2" fill="#2BE3A4"/>
+      <text x="322" y="440" fill="#7E9CBE" font-size="16">Lee el CDR de SUNAT</text>
+    </g>
+    <text x="72" y="482" fill="#7E9CBE" font-size="16">Valida RUC · cuadra el IGV al céntimo · nombra el archivo como SUNAT lo exige</text>
+
+    <text x="72" y="586" fill="#56749B" font-size="15" letter-spacing="1.5">github.com/Giovanniedu/sunat-ubl</text>
+  </g>
+
+  <g transform="translate(700, 128)">
+    <rect width="508" height="384" rx="16" fill="#0C1626" stroke="#20334F"/>
+    <rect width="508" height="40" rx="16" fill="#101E33"/>
+    <rect y="24" width="508" height="16" fill="#101E33"/>
+    <circle cx="24" cy="20" r="5" fill="#FF5F57"/>
+    <circle cx="42" cy="20" r="5" fill="#FEBC2E"/>
+    <circle cx="60" cy="20" r="5" fill="#28C840"/>
+    <text x="440" y="25" fill="#4B688C" font-size="12" font-family="ui-monospace, 'Cascadia Code', Consolas, monospace">factura.py</text>
+
+    <g font-family="ui-monospace, 'Cascadia Code', Consolas, Menlo, monospace" font-size="14" fill="#C6D6EA">
+      <text x="28" y="80"><tspan fill="#7C90AC">from</tspan> sunat_ubl <tspan fill="#7C90AC">import</tspan> Linea, firmar</text>
+      <text x="28" y="112"> </text>
+      <text x="28" y="144">factura.lineas = [</text>
+      <text x="28" y="176">  Linea(<tspan fill="#2BE3A4">"Consultoría"</tspan>, <tspan fill="#F5B301">2</tspan>, <tspan fill="#2BE3A4">"100.00"</tspan>),</text>
+      <text x="28" y="208">  Linea.desde_precio_con_igv(</text>
+      <text x="28" y="240">      <tspan fill="#2BE3A4">"Soporte"</tspan>, <tspan fill="#F5B301">1</tspan>, precio_con_igv=<tspan fill="#F5B301">118</tspan>),</text>
+      <text x="28" y="272">]</text>
+      <text x="28" y="304">xml = firmar(factura, <tspan fill="#2BE3A4">"cert.pem"</tspan>, <tspan fill="#2BE3A4">"key.pem"</tspan>)</text>
+      <text x="28" y="336" fill="#4E6B8F"># → 20999999990-01-F001-1.xml</text>
+    </g>
+
+    <rect x="28" y="356" width="452" height="1" fill="#1B2C45"/>
+    <text x="28" y="374" fill="#5E7FA3" font-size="11.5" font-family="ui-monospace, Consolas, monospace">SHA-256 · RSA · exc-c14n · firma en UBLExtensions</text>
+  </g>
+</svg>

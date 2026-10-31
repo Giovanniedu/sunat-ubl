@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="380" viewBox="0 0 1240 380" role="img" aria-label="Flujo: datos del comprobante, sunat-ubl, XML UBL 2.1 firmado, SUNAT SEE-SOL y CDR">
+  <defs>
+    <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8CA3C0"/>
+    </marker>
+    <marker id="flecha-verde" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0E9F6E"/>
+    </marker>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="1239" height="379" rx="18" fill="#FFFFFF" stroke="#E1E8F2"/>
+  <rect x="0.5" y="0.5" width="1239" height="379" rx="18" fill="#F8FAFD" opacity="0.6"/>
+
+  <g font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <text x="64" y="58" fill="#16233A" font-size="21" font-weight="700">Cómo funciona</text>
+    <text x="64" y="84" fill="#5C7291" font-size="15">Del dato al comprobante aceptado, sin escribir XML a mano</text>
+
+    <!-- 1 -->
+    <rect x="64" y="120" width="196" height="104" rx="12" fill="#F2F7FD" stroke="#D6E2F1"/>
+    <text x="162" y="158" fill="#16233A" font-size="15" font-weight="700" text-anchor="middle">Tu JSON o Python</text>
+    <text x="162" y="184" fill="#5C7291" font-size="13" text-anchor="middle">datos del comprobante</text>
+
+    <!-- 2 -->
+    <rect x="293" y="120" width="196" height="104" rx="12" fill="#0E9F6E"/>
+    <text x="391" y="158" fill="#FFFFFF" font-size="16" font-weight="700" text-anchor="middle">sunat_ubl</text>
+    <text x="391" y="182" fill="#C9F3E2" font-size="12.5" text-anchor="middle">totales · catálogos</text>
+    <text x="391" y="200" fill="#C9F3E2" font-size="12.5" text-anchor="middle">validación RUC</text>
+
+    <!-- 3 -->
+    <rect x="522" y="120" width="196" height="104" rx="12" fill="#F2F7FD" stroke="#D6E2F1"/>
+    <text x="620" y="158" fill="#16233A" font-size="15" font-weight="700" text-anchor="middle">XML UBL 2.1</text>
+    <text x="620" y="184" fill="#5C7291" font-size="13" text-anchor="middle">firmado XMLDSig</text>
+
+    <!-- 4 -->
+    <rect x="751" y="120" width="196" height="104" rx="12" fill="#F2F7FD" stroke="#D6E2F1"/>
+    <text x="849" y="158" fill="#16233A" font-size="15" font-weight="700" text-anchor="middle">SUNAT SEE-SOL</text>
+    <text x="849" y="184" fill="#5C7291" font-size="13" text-anchor="middle">recibe el comprobante</text>
+
+    <!-- 5 -->
+    <rect x="980" y="120" width="196" height="104" rx="12" fill="#FFF7E8" stroke="#F0DDB4"/>
+    <text x="1078" y="158" fill="#8A5A00" font-size="15" font-weight="700" text-anchor="middle">CDR</text>
+    <text x="1078" y="182" fill="#94713A" font-size="12.5" text-anchor="middle">aceptado · observado</text>
+    <text x="1078" y="200" fill="#94713A" font-size="12.5" text-anchor="middle">o rechazado</text>
+
+    <g stroke="#8CA3C0" stroke-width="1.6" fill="none">
+      <line x1="264" y1="172" x2="285" y2="172" marker-end="url(#flecha)"/>
+      <line x1="493" y1="172" x2="514" y2="172" marker-end="url(#flecha)"/>
+      <line x1="722" y1="172" x2="743" y2="172" marker-end="url(#flecha)"/>
+      <line x1="951" y1="172" x2="972" y2="172" marker-end="url(#flecha)"/>
+    </g>
+
+    <path d="M1078 224 V300 H162 V236" fill="none" stroke="#0E9F6E" stroke-width="1.6" stroke-dasharray="5 5" marker-end="url(#flecha-verde)"/>
+    <rect x="470" y="286" width="384" height="28" rx="14" fill="#FFFFFF"/>
+    <text x="662" y="305" fill="#0B7A55" font-size="12.5" text-anchor="middle">código, descripción y observaciones</text>
+
+    <text x="64" y="348" fill="#7B8FA9" font-size="12.5">Todo local: la librería no envía nada a SUNAT. Tú decides cuándo y con qué certificado firmar.</text>
+  </g>
+</svg>
